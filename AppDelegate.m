@@ -7,6 +7,14 @@
 //
 
 #import "AppDelegate.h"
+#import "ETDrawerViewController.h"
+#import "ETDrawerVisualManager.h"
+
+const CGFloat cornersize = 20.f;
+
+#define  BACKGROUNDCOLOR1 [UIColor colorWithRed:244.0f/255.0f green:178.0f/255.0f blue:59.0f/255.0f alpha:1.0f]
+#define  BACKGROUNDCOLOR2 [UIColor colorWithRed:87.0f/255.0f green:187.0f/255.0f blue:164.0f/255.0f alpha:1.0f]
+#define  BACKGROUNDCOLOR3 [UIColor colorWithRed:30.0f/255.0f green:30.0f/255.0f blue:30.0f/255.0f alpha:1.0f]
 
 @interface AppDelegate ()
 
@@ -17,6 +25,64 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    UIViewController * leftSideDrawerViewController = [[UIViewController alloc] init];
+    leftSideDrawerViewController.view.backgroundColor = [UIColor blueColor];
+    
+    UIViewController * centerViewController = [[UIViewController alloc] init];
+    centerViewController.view.backgroundColor = BACKGROUNDCOLOR1;
+    UIImageView *imgV1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(centerViewController.view.frame) - cornersize, cornersize, cornersize)];
+    imgV1.image = [UIImage imageNamed:@"corner-bl.png"];
+    [centerViewController.view addSubview:imgV1];
+    
+    UIImageView *imgV2= [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(centerViewController.view.frame) - cornersize, CGRectGetMaxY(centerViewController.view.frame) - cornersize, cornersize, cornersize)];
+    imgV2.image = [UIImage imageNamed:@"corner-br.png"];
+    [centerViewController.view addSubview:imgV2];
+    
+    UIImageView *imgV3 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, cornersize, cornersize)];
+    imgV3.image = [UIImage imageNamed:@"corner-tl.png"];
+    [centerViewController.view addSubview:imgV3];
+    
+    UIImageView *imgV4 = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(centerViewController.view.frame) - cornersize, 0, cornersize, cornersize)];
+    imgV4.image = [UIImage imageNamed:@"corner-tr.png"];
+    [centerViewController.view addSubview:imgV4];
+
+    UIViewController * rightSideDrawerViewController = [[UIViewController alloc] init];
+    rightSideDrawerViewController.view.backgroundColor = BACKGROUNDCOLOR3;
+    
+    UIViewController * bottomSideDrawerViewController = [[UIViewController alloc] init];
+    bottomSideDrawerViewController.view.backgroundColor = BACKGROUNDCOLOR2;
+
+    
+    UINavigationController * navigationController = [[UINavigationController alloc] initWithRootViewController:centerViewController];
+    [navigationController setNavigationBarHidden:YES];
+    
+    ETDrawerViewController * drawerController = [[ETDrawerViewController alloc]
+                                             initWithCenterViewController:navigationController
+                                             leftDrawerViewController:leftSideDrawerViewController
+                                             rightDrawerViewController:rightSideDrawerViewController bottomDrawerViewController:bottomSideDrawerViewController];
+    [drawerController setMaximumLeftDrawerWidth:240.0];
+    [drawerController setMaximumRightDrawerWidth:240.0];
+    [drawerController setMaximumBottomDrawerHeight:508.0];
+    
+    [drawerController setOpenGestureModeMask:ETOpenGestureModeAll];
+    [drawerController setCloseGestureModeMask:ETCloseGestureModeAll];
+    
+    [drawerController
+     setDrawerVisualStateBlock:^(ETDrawerViewController *drawerController, ETDirection direction, CGFloat percentVisible) {
+         ETDrawerControllerDrawerVisualStateBlock block;
+         block = [[ETDrawerVisualManager sharedManager]
+                  drawerVisualStateBlockForDrawerSide:direction];
+         if(block){
+             block(drawerController, direction, percentVisible);
+         }
+     }];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window setRootViewController:drawerController];
+    // Override point for customization after application launch.
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
