@@ -14,10 +14,7 @@
 		112DFC111A1CD80C00F11D2C /* ETDrawerVisualManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 112DFC0A1A1CD80C00F11D2C /* ETDrawerVisualManager.m */; };
 		112DFC121A1CD80C00F11D2C /* ETDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 112DFC0E1A1CD80C00F11D2C /* ETDrawerViewController.m */; };
 		112DFC131A1CD80C00F11D2C /* UIViewController+ETDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 112DFC101A1CD80C00F11D2C /* UIViewController+ETDrawerController.m */; };
-		112DFC1A1A1CF80600F11D2C /* corner-bl.png in Resources */ = {isa = PBXBuildFile; fileRef = 112DFC161A1CF80600F11D2C /* corner-bl.png */; };
-		112DFC1B1A1CF80600F11D2C /* corner-br.png in Resources */ = {isa = PBXBuildFile; fileRef = 112DFC171A1CF80600F11D2C /* corner-br.png */; };
-		112DFC1C1A1CF80600F11D2C /* corner-tl.png in Resources */ = {isa = PBXBuildFile; fileRef = 112DFC181A1CF80600F11D2C /* corner-tl.png */; };
-		112DFC1D1A1CF80600F11D2C /* corner-tr.png in Resources */ = {isa = PBXBuildFile; fileRef = 112DFC191A1CF80600F11D2C /* corner-tr.png */; };
+		112DFC211A1D01F000F11D2C /* Resource.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 112DFC201A1D01F000F11D2C /* Resource.xcassets */; };
 		DB4DA61575452FF893EA3BC3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81954E6B1D78E716B9B3BB93 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -34,10 +31,7 @@
 		112DFC0E1A1CD80C00F11D2C /* ETDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETDrawerViewController.m; sourceTree = "<group>"; };
 		112DFC0F1A1CD80C00F11D2C /* UIViewController+ETDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ETDrawerController.h"; sourceTree = "<group>"; };
 		112DFC101A1CD80C00F11D2C /* UIViewController+ETDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ETDrawerController.m"; sourceTree = "<group>"; };
-		112DFC161A1CF80600F11D2C /* corner-bl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "corner-bl.png"; sourceTree = "<group>"; };
-		112DFC171A1CF80600F11D2C /* corner-br.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "corner-br.png"; sourceTree = "<group>"; };
-		112DFC181A1CF80600F11D2C /* corner-tl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "corner-tl.png"; sourceTree = "<group>"; };
-		112DFC191A1CF80600F11D2C /* corner-tr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "corner-tr.png"; sourceTree = "<group>"; };
+		112DFC201A1D01F000F11D2C /* Resource.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resource.xcassets; sourceTree = SOURCE_ROOT; };
 		6355819C043B81CD5BB1F429 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		81954E6B1D78E716B9B3BB93 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2D1EDCEF1F5DAD9926F99DF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -78,8 +72,8 @@
 			children = (
 				112DFBDE1A1B911000F11D2C /* AppDelegate.h */,
 				112DFBDF1A1B911000F11D2C /* AppDelegate.m */,
+				112DFC201A1D01F000F11D2C /* Resource.xcassets */,
 				112DFBE71A1B911000F11D2C /* Images.xcassets */,
-				112DFC141A1CF80600F11D2C /* Resource */,
 				112DFBDA1A1B911000F11D2C /* Supporting Files */,
 				112DFC081A1CD80C00F11D2C /* Helpers */,
 				112DFC0B1A1CD80C00F11D2C /* VIewControllers */,
@@ -122,25 +116,6 @@
 				112DFC101A1CD80C00F11D2C /* UIViewController+ETDrawerController.m */,
 			);
 			path = ETDrawerViewController;
-			sourceTree = "<group>";
-		};
-		112DFC141A1CF80600F11D2C /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				112DFC151A1CF80600F11D2C /* Drawer */,
-			);
-			path = Resource;
-			sourceTree = SOURCE_ROOT;
-		};
-		112DFC151A1CF80600F11D2C /* Drawer */ = {
-			isa = PBXGroup;
-			children = (
-				112DFC161A1CF80600F11D2C /* corner-bl.png */,
-				112DFC171A1CF80600F11D2C /* corner-br.png */,
-				112DFC181A1CF80600F11D2C /* corner-tl.png */,
-				112DFC191A1CF80600F11D2C /* corner-tr.png */,
-			);
-			path = Drawer;
 			sourceTree = "<group>";
 		};
 		48D7A9E329B3BA8B22A283AC /* Frameworks */ = {
@@ -219,12 +194,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				112DFC1D1A1CF80600F11D2C /* corner-tr.png in Resources */,
-				112DFC1C1A1CF80600F11D2C /* corner-tl.png in Resources */,
-				112DFC1A1A1CF80600F11D2C /* corner-bl.png in Resources */,
 				112DFC071A1B947C00F11D2C /* Info.plist in Resources */,
-				112DFC1B1A1CF80600F11D2C /* corner-br.png in Resources */,
 				112DFBE81A1B911000F11D2C /* Images.xcassets in Resources */,
+				112DFC211A1D01F000F11D2C /* Resource.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
