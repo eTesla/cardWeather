@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ETDrawerViewController.h"
 #import "ETDrawerVisualManager.h"
+#import "CoreLocation/CoreLocation.h"
 
 const CGFloat cornersize = 20.f;
 
@@ -16,7 +17,9 @@ const CGFloat cornersize = 20.f;
 #define  BACKGROUNDCOLOR2 [UIColor colorWithRed:87.0f/255.0f green:187.0f/255.0f blue:164.0f/255.0f alpha:1.0f]
 #define  BACKGROUNDCOLOR3 [UIColor colorWithRed:30.0f/255.0f green:30.0f/255.0f blue:30.0f/255.0f alpha:1.0f]
 
-@interface AppDelegate ()
+@interface AppDelegate ()<CLLocationManagerDelegate>
+
+@property (strong, nonatomic) CLLocationManager* locationManager;
 
 @end
 
@@ -26,35 +29,19 @@ const CGFloat cornersize = 20.f;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    //使用Storyboard初始化根界面
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"weather" bundle:nil];
+    
     UIViewController * leftSideDrawerViewController = [[UIViewController alloc] init];
     leftSideDrawerViewController.view.backgroundColor = [UIColor blueColor];
-    
-    UIViewController * centerViewController = [[UIViewController alloc] init];
-    centerViewController.view.backgroundColor = BACKGROUNDCOLOR1;
-    UIImageView *imgV1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(centerViewController.view.frame) - cornersize, cornersize, cornersize)];
-    imgV1.image = [UIImage imageNamed:@"corner-bl.png"];
-    [centerViewController.view addSubview:imgV1];
-    
-    UIImageView *imgV2= [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(centerViewController.view.frame) - cornersize, CGRectGetMaxY(centerViewController.view.frame) - cornersize, cornersize, cornersize)];
-    imgV2.image = [UIImage imageNamed:@"corner-br.png"];
-    [centerViewController.view addSubview:imgV2];
-    
-    UIImageView *imgV3 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, cornersize, cornersize)];
-    imgV3.image = [UIImage imageNamed:@"corner-tl.png"];
-    [centerViewController.view addSubview:imgV3];
-    
-    UIImageView *imgV4 = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(centerViewController.view.frame) - cornersize, 0, cornersize, cornersize)];
-    imgV4.image = [UIImage imageNamed:@"corner-tr.png"];
-    [centerViewController.view addSubview:imgV4];
-
-    UIViewController * rightSideDrawerViewController = [[UIViewController alloc] init];
+        UIViewController * rightSideDrawerViewController = [[UIViewController alloc] init];
     rightSideDrawerViewController.view.backgroundColor = BACKGROUNDCOLOR3;
     
     UIViewController * bottomSideDrawerViewController = [[UIViewController alloc] init];
     bottomSideDrawerViewController.view.backgroundColor = BACKGROUNDCOLOR2;
 
     
-    UINavigationController * navigationController = [[UINavigationController alloc] initWithRootViewController:centerViewController];
+    UINavigationController * navigationController = [storyBoard instantiateViewControllerWithIdentifier:@"CWTMainNavC"];
     [navigationController setNavigationBarHidden:YES];
     
     ETDrawerViewController * drawerController = [[ETDrawerViewController alloc]
@@ -78,6 +65,7 @@ const CGFloat cornersize = 20.f;
          }
      }];
     
+    [self startLocation];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window setRootViewController:drawerController];
     // Override point for customization after application launch.
@@ -106,6 +94,55 @@ const CGFloat cornersize = 20.f;
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void)startLocation{
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    
+    self.locationManager.delegate = self;
+    
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    
+    self.locationManager.distanceFilter = 10.0f;
+    
+    [self.locationManager startUpdatingLocation];
+    
+}
+//定位代理经纬度回调
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+    
+    
+    
+    [self.locationManager stopUpdatingLocation];
+    
+    NSLog(@"location ok");
+    
+    
+    NSLog(@"%@",[NSString stringWithFormat:@"经度:%3.5f\n纬度:%3.5f",newLocation.coordinate.latitude,newLocation.coordinate.longitude]);
+    
+    
+    
+    CLGeocoder * geoCoder = [[CLGeocoder alloc] init];
+    
+    [geoCoder reverseGeocodeLocation:newLocation completionHandler:^(NSArray *placemarks, NSError *error) {
+        
+        for (CLPlacemark * placemark in placemarks) {
+            NSDictionary *test = [placemark addressDictionary];
+            //  Country(国家)  State(城市)  SubLocality(区)
+            
+            NSLog(@"%@", [test objectForKey:@"State"]);
+            NSLog(@"%@", [test objectForKey:@"Name"]);
+            NSLog(@"%@", [test objectForKey:@"City"]);
+            NSLog(@"%@", [test objectForKey:@"SubLocality"]);
+            NSLog(@"%@", [test objectForKey:@"Country"]);
+        }
+        
+    }];
+    
+    
+    
 }
 
 @end
