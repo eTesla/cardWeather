@@ -8,6 +8,8 @@
 
 #import "CWTHTTPClient.h"
 
+static NSString * const openweatherAPPKey = @"7fb6473ef172655f1af22bdec4a40e85";
+
 #define CWTCLIENT [CWTHTTPClient sharedClient]
 
 #define CWTPOST(path,params,sblock,eblock) \
@@ -62,11 +64,6 @@ static NSString *const CWTServer = @"";
     {
         return nil;
     }
-    
-    [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
-    self.parameterEncoding = AFJSONParameterEncoding;
-    //超时设置
-    self.fTimeout = AFNETWORKTIMEOUT;
     
     return self;
 }

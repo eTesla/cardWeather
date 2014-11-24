@@ -103,7 +103,11 @@ typedef void (^ETDrawerControllerDrawerVisualStateBlock)(ETDrawerViewController 
 -(id)initWithCenterViewController:(UIViewController *)centerViewController leftDrawerViewController:(UIViewController *)leftDrawerViewController rightDrawerViewController:(UIViewController *)rightDrawerViewController bottomDrawerViewController:(UIViewController*)bottomDrawerViewController;
 
 
+-(void)toggleDrawerSide:(ETDirection)direction animated:(BOOL)animated completion:(void(^)(BOOL finished))completion;
+
 -(void)setDrawerVisualStateBlock:(void(^)(ETDrawerViewController * drawerController, ETDirection direction, CGFloat percentVisible))drawerVisualStateBlock;
+
+-(void)setGestureCompletionBlock:(void(^)(ETDrawerViewController * drawerController, UIGestureRecognizer * gesture))gestureCompletionBlock;
 
 @end
 

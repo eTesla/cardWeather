@@ -19,11 +19,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-JSONKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -44,6 +39,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-TBXML.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-pop.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,92 +57,52 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0CBF203DFA4D609DD79DF3D6</key>
+		<key>0EAA6ABD055D2B8EB7EC8275</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>16635604FE1E5BE53E32E5C0</key>
+		<key>19396C67CD171A7E3ACD1B05</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>190BE359070A0CB663E7CE69</key>
+		<key>2465415CAEA42D9949095C23</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1A115A2335A7DBA012BAE35B</key>
+		<key>34FD8EE12415B24DBAC8C557</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>21969809C8A9153FD09CD484</key>
+		<key>36DFC8813FBACB3BC89FDA1E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>24DD1B7C3B3BF4B9E630EB43</key>
+		<key>634C9C800CA5416A0DE1FC9D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>30EBC36A409E03144F9E09EB</key>
+		<key>7067039536C85BAC2BF51970</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4558B0807E84E5F80BE4B19A</key>
+		<key>855854A58A2B19E86C1562D5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4E2922771A392704FCBC2EDA</key>
+		<key>A40B54498B21E4700670D9DE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5509BAC6C7788488B2EF7228</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6D8D2BA1F5843854A7F9AB39</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7D2EB9E954BE0FCD48C6FC8D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>96E9182C9345DACC19907948</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A71AD35F15194993F44ADC75</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DA3D31CA56E2122B064D96A4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E5F75AA25E3E6721ACD3C6DC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EE4F3CAAE6A91DA06D859F55</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F6953EF4E6E083BF7C884346</key>
+		<key>A679D678F505FEBEA4772A40</key>
 		<dict>
 			<key>primary</key>
 			<true/>

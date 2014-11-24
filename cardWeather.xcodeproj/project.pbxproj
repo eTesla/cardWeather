@@ -10,14 +10,14 @@
 		112DFBDD1A1B911000F11D2C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 112DFBDC1A1B911000F11D2C /* main.m */; };
 		112DFBE01A1B911000F11D2C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 112DFBDF1A1B911000F11D2C /* AppDelegate.m */; };
 		112DFBE81A1B911000F11D2C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 112DFBE71A1B911000F11D2C /* Images.xcassets */; };
-		112DFC071A1B947C00F11D2C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 112DFC061A1B947C00F11D2C /* Info.plist */; };
 		112DFC111A1CD80C00F11D2C /* ETDrawerVisualManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 112DFC0A1A1CD80C00F11D2C /* ETDrawerVisualManager.m */; };
-		112DFC121A1CD80C00F11D2C /* ETDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 112DFC0E1A1CD80C00F11D2C /* ETDrawerViewController.m */; };
-		112DFC131A1CD80C00F11D2C /* UIViewController+ETDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 112DFC101A1CD80C00F11D2C /* UIViewController+ETDrawerController.m */; };
 		112DFC211A1D01F000F11D2C /* Resource.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 112DFC201A1D01F000F11D2C /* Resource.xcassets */; };
-		112DFC241A1E19C800F11D2C /* CWTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 112DFC231A1E19C800F11D2C /* CWTMainViewController.m */; };
 		112DFC261A1E19D200F11D2C /* weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 112DFC251A1E19D200F11D2C /* weather.storyboard */; };
 		112DFC2E1A1E49CD00F11D2C /* CWTHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 112DFC2D1A1E49CD00F11D2C /* CWTHTTPClient.m */; };
+		112DFC371A1F6C8700F11D2C /* CWTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 112DFC311A1F6C8700F11D2C /* CWTMainViewController.m */; };
+		112DFC381A1F6C8700F11D2C /* ETDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 112DFC341A1F6C8700F11D2C /* ETDrawerViewController.m */; };
+		112DFC391A1F6C8700F11D2C /* UIViewController+ETDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 112DFC361A1F6C8700F11D2C /* UIViewController+ETDrawerController.m */; };
+		112DFC3E1A1F79C300F11D2C /* CWTMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 112DFC3D1A1F79C300F11D2C /* CWTMenuButton.m */; };
 		DB4DA61575452FF893EA3BC3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81954E6B1D78E716B9B3BB93 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -26,20 +26,22 @@
 		112DFBDC1A1B911000F11D2C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
 		112DFBDE1A1B911000F11D2C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		112DFBDF1A1B911000F11D2C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = SOURCE_ROOT; };
-		112DFBE71A1B911000F11D2C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "/Users/april/Work/iOS App/github_project/cardWeather/Images.xcassets"; sourceTree = "<absolute>"; };
+		112DFBE71A1B911000F11D2C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
 		112DFC061A1B947C00F11D2C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		112DFC091A1CD80C00F11D2C /* ETDrawerVisualManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETDrawerVisualManager.h; sourceTree = "<group>"; };
 		112DFC0A1A1CD80C00F11D2C /* ETDrawerVisualManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETDrawerVisualManager.m; sourceTree = "<group>"; };
-		112DFC0D1A1CD80C00F11D2C /* ETDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETDrawerViewController.h; sourceTree = "<group>"; };
-		112DFC0E1A1CD80C00F11D2C /* ETDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETDrawerViewController.m; sourceTree = "<group>"; };
-		112DFC0F1A1CD80C00F11D2C /* UIViewController+ETDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ETDrawerController.h"; sourceTree = "<group>"; };
-		112DFC101A1CD80C00F11D2C /* UIViewController+ETDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ETDrawerController.m"; sourceTree = "<group>"; };
 		112DFC201A1D01F000F11D2C /* Resource.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resource.xcassets; sourceTree = SOURCE_ROOT; };
-		112DFC221A1E19C800F11D2C /* CWTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTMainViewController.h; sourceTree = "<group>"; };
-		112DFC231A1E19C800F11D2C /* CWTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTMainViewController.m; sourceTree = "<group>"; };
 		112DFC251A1E19D200F11D2C /* weather.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = weather.storyboard; sourceTree = SOURCE_ROOT; };
 		112DFC2C1A1E49CD00F11D2C /* CWTHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTHTTPClient.h; sourceTree = "<group>"; };
 		112DFC2D1A1E49CD00F11D2C /* CWTHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTHTTPClient.m; sourceTree = "<group>"; };
+		112DFC301A1F6C8700F11D2C /* CWTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTMainViewController.h; sourceTree = "<group>"; };
+		112DFC311A1F6C8700F11D2C /* CWTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTMainViewController.m; sourceTree = "<group>"; };
+		112DFC331A1F6C8700F11D2C /* ETDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETDrawerViewController.h; sourceTree = "<group>"; };
+		112DFC341A1F6C8700F11D2C /* ETDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETDrawerViewController.m; sourceTree = "<group>"; };
+		112DFC351A1F6C8700F11D2C /* UIViewController+ETDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ETDrawerController.h"; sourceTree = "<group>"; };
+		112DFC361A1F6C8700F11D2C /* UIViewController+ETDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ETDrawerController.m"; sourceTree = "<group>"; };
+		112DFC3C1A1F79C300F11D2C /* CWTMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTMenuButton.h; sourceTree = "<group>"; };
+		112DFC3D1A1F79C300F11D2C /* CWTMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTMenuButton.m; sourceTree = "<group>"; };
 		6355819C043B81CD5BB1F429 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		81954E6B1D78E716B9B3BB93 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2D1EDCEF1F5DAD9926F99DF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,7 +88,8 @@
 				112DFC081A1CD80C00F11D2C /* Helpers */,
 				112DFC2B1A1E49A100F11D2C /* NetAgent */,
 				112DFBDA1A1B911000F11D2C /* Supporting Files */,
-				112DFC0B1A1CD80C00F11D2C /* VIewControllers */,
+				112DFC2F1A1F6C8700F11D2C /* ViewControllers */,
+				112DFC3A1A1F799900F11D2C /* Views */,
 			);
 			path = cardWeather;
 			sourceTree = "<group>";
@@ -109,27 +112,6 @@
 			path = Helpers;
 			sourceTree = SOURCE_ROOT;
 		};
-		112DFC0B1A1CD80C00F11D2C /* VIewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				112DFC221A1E19C800F11D2C /* CWTMainViewController.h */,
-				112DFC231A1E19C800F11D2C /* CWTMainViewController.m */,
-				112DFC0C1A1CD80C00F11D2C /* ETDrawerViewController */,
-			);
-			path = VIewControllers;
-			sourceTree = SOURCE_ROOT;
-		};
-		112DFC0C1A1CD80C00F11D2C /* ETDrawerViewController */ = {
-			isa = PBXGroup;
-			children = (
-				112DFC0D1A1CD80C00F11D2C /* ETDrawerViewController.h */,
-				112DFC0E1A1CD80C00F11D2C /* ETDrawerViewController.m */,
-				112DFC0F1A1CD80C00F11D2C /* UIViewController+ETDrawerController.h */,
-				112DFC101A1CD80C00F11D2C /* UIViewController+ETDrawerController.m */,
-			);
-			path = ETDrawerViewController;
-			sourceTree = "<group>";
-		};
 		112DFC2B1A1E49A100F11D2C /* NetAgent */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +120,44 @@
 			);
 			path = NetAgent;
 			sourceTree = SOURCE_ROOT;
+		};
+		112DFC2F1A1F6C8700F11D2C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				112DFC301A1F6C8700F11D2C /* CWTMainViewController.h */,
+				112DFC311A1F6C8700F11D2C /* CWTMainViewController.m */,
+				112DFC321A1F6C8700F11D2C /* ETDrawerViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = SOURCE_ROOT;
+		};
+		112DFC321A1F6C8700F11D2C /* ETDrawerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				112DFC331A1F6C8700F11D2C /* ETDrawerViewController.h */,
+				112DFC341A1F6C8700F11D2C /* ETDrawerViewController.m */,
+				112DFC351A1F6C8700F11D2C /* UIViewController+ETDrawerController.h */,
+				112DFC361A1F6C8700F11D2C /* UIViewController+ETDrawerController.m */,
+			);
+			path = ETDrawerViewController;
+			sourceTree = "<group>";
+		};
+		112DFC3A1A1F799900F11D2C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				112DFC3B1A1F799900F11D2C /* CustomBtns */,
+			);
+			path = Views;
+			sourceTree = SOURCE_ROOT;
+		};
+		112DFC3B1A1F799900F11D2C /* CustomBtns */ = {
+			isa = PBXGroup;
+			children = (
+				112DFC3C1A1F79C300F11D2C /* CWTMenuButton.h */,
+				112DFC3D1A1F79C300F11D2C /* CWTMenuButton.m */,
+			);
+			path = CustomBtns;
+			sourceTree = "<group>";
 		};
 		48D7A9E329B3BA8B22A283AC /* Frameworks */ = {
 			isa = PBXGroup;
@@ -215,7 +235,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				112DFC071A1B947C00F11D2C /* Info.plist in Resources */,
 				112DFC261A1E19D200F11D2C /* weather.storyboard in Resources */,
 				112DFBE81A1B911000F11D2C /* Images.xcassets in Resources */,
 				112DFC211A1D01F000F11D2C /* Resource.xcassets in Resources */,
@@ -262,12 +281,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				112DFC391A1F6C8700F11D2C /* UIViewController+ETDrawerController.m in Sources */,
+				112DFC3E1A1F79C300F11D2C /* CWTMenuButton.m in Sources */,
+				112DFC381A1F6C8700F11D2C /* ETDrawerViewController.m in Sources */,
 				112DFBE01A1B911000F11D2C /* AppDelegate.m in Sources */,
-				112DFC131A1CD80C00F11D2C /* UIViewController+ETDrawerController.m in Sources */,
-				112DFC241A1E19C800F11D2C /* CWTMainViewController.m in Sources */,
 				112DFBDD1A1B911000F11D2C /* main.m in Sources */,
+				112DFC371A1F6C8700F11D2C /* CWTMainViewController.m in Sources */,
 				112DFC111A1CD80C00F11D2C /* ETDrawerVisualManager.m in Sources */,
-				112DFC121A1CD80C00F11D2C /* ETDrawerViewController.m in Sources */,
 				112DFC2E1A1E49CD00F11D2C /* CWTHTTPClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
