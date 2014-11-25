@@ -11,6 +11,7 @@
 #import "CWTMenuButton.h"
 #import "UIViewController+ETDrawerController.h"
 #import "ETDrawerViewController.h"
+#import "CWTHTTPClient.h"
 
 @interface CWTMainViewController ()
 {
@@ -34,6 +35,17 @@
     __weak CWTMainViewController *weakself = self;
     [self.et_drawerController setGestureCompletionBlock:^(ETDrawerViewController *drawerController, UIGestureRecognizer * gesture) {
         [weakself.menuBtn touchUpInsideHandler:nil];
+    }];
+    
+    [CWTHTTPClient getWeatherInfoWithAreaId:@""
+                                       type:@""
+                                       date:@""
+                               successBlock:^(id object){
+                                   NSLog(@"success!!");
+                               }
+                                  erroBlock:^(NSString* error){
+                                      
+                                      NSLog(@"fail!!");
     }];
 }
 

@@ -18,6 +18,8 @@
 		112DFC381A1F6C8700F11D2C /* ETDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 112DFC341A1F6C8700F11D2C /* ETDrawerViewController.m */; };
 		112DFC391A1F6C8700F11D2C /* UIViewController+ETDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 112DFC361A1F6C8700F11D2C /* UIViewController+ETDrawerController.m */; };
 		112DFC3E1A1F79C300F11D2C /* CWTMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 112DFC3D1A1F79C300F11D2C /* CWTMenuButton.m */; };
+		116585F71A24CE850077E654 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 116585F61A24CE850077E654 /* Utils.m */; };
+		116585FA1A24D00D0077E654 /* NSString+HMACSHA1.m in Sources */ = {isa = PBXBuildFile; fileRef = 116585F91A24D00D0077E654 /* NSString+HMACSHA1.m */; };
 		DB4DA61575452FF893EA3BC3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81954E6B1D78E716B9B3BB93 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,10 @@
 		112DFC361A1F6C8700F11D2C /* UIViewController+ETDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ETDrawerController.m"; sourceTree = "<group>"; };
 		112DFC3C1A1F79C300F11D2C /* CWTMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTMenuButton.h; sourceTree = "<group>"; };
 		112DFC3D1A1F79C300F11D2C /* CWTMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTMenuButton.m; sourceTree = "<group>"; };
+		116585F51A24CE850077E654 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		116585F61A24CE850077E654 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		116585F81A24D00D0077E654 /* NSString+HMACSHA1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HMACSHA1.h"; sourceTree = "<group>"; };
+		116585F91A24D00D0077E654 /* NSString+HMACSHA1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HMACSHA1.m"; sourceTree = "<group>"; };
 		6355819C043B81CD5BB1F429 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		81954E6B1D78E716B9B3BB93 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2D1EDCEF1F5DAD9926F99DF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +91,7 @@
 				112DFC251A1E19D200F11D2C /* weather.storyboard */,
 				112DFBE71A1B911000F11D2C /* Images.xcassets */,
 				112DFC201A1D01F000F11D2C /* Resource.xcassets */,
+				116585F41A24CE750077E654 /* Commen */,
 				112DFC081A1CD80C00F11D2C /* Helpers */,
 				112DFC2B1A1E49A100F11D2C /* NetAgent */,
 				112DFBDA1A1B911000F11D2C /* Supporting Files */,
@@ -108,6 +115,8 @@
 			children = (
 				112DFC091A1CD80C00F11D2C /* ETDrawerVisualManager.h */,
 				112DFC0A1A1CD80C00F11D2C /* ETDrawerVisualManager.m */,
+				116585F81A24D00D0077E654 /* NSString+HMACSHA1.h */,
+				116585F91A24D00D0077E654 /* NSString+HMACSHA1.m */,
 			);
 			path = Helpers;
 			sourceTree = SOURCE_ROOT;
@@ -158,6 +167,15 @@
 			);
 			path = CustomBtns;
 			sourceTree = "<group>";
+		};
+		116585F41A24CE750077E654 /* Commen */ = {
+			isa = PBXGroup;
+			children = (
+				116585F51A24CE850077E654 /* Utils.h */,
+				116585F61A24CE850077E654 /* Utils.m */,
+			);
+			path = Commen;
+			sourceTree = SOURCE_ROOT;
 		};
 		48D7A9E329B3BA8B22A283AC /* Frameworks */ = {
 			isa = PBXGroup;
@@ -281,6 +299,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				116585F71A24CE850077E654 /* Utils.m in Sources */,
+				116585FA1A24D00D0077E654 /* NSString+HMACSHA1.m in Sources */,
 				112DFC391A1F6C8700F11D2C /* UIViewController+ETDrawerController.m in Sources */,
 				112DFC3E1A1F79C300F11D2C /* CWTMenuButton.m in Sources */,
 				112DFC381A1F6C8700F11D2C /* ETDrawerViewController.m in Sources */,
