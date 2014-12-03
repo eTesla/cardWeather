@@ -1,0 +1,69 @@
+/* 
+  Localizable.strings
+  cardWeather
+
+  Created by east on 14/12/3.
+  Copyright (c) 2014年 east. All rights reserved.
+*/
+
+//
+"WEATHER00"="Sunny";
+"WEATHER01"="Cloudy";
+"WEATHER02"="Overcast";
+"WEATHER03"="Shower";
+"WEATHER04"="Thundershower";
+"WEATHER05"="Thundershower with hail";
+"WEATHER06"="Sleet";
+"WEATHER07"="Light rain";
+"WEATHER08"="Moderate rain";
+"WEATHER09"="Heavy rain";
+"WEATHER10"="Storm";
+"WEATHER11"="Heavy storm";
+"WEATHER12"="Severe storm";
+"WEATHER13"="Snow flurry";
+"WEATHER14"="Light snow";
+"WEATHER15"="Moderate snow";
+"WEATHER16"="Heavy snow";
+"WEATHER17"="Snowstorm";
+"WEATHER18"="Foggy";
+"WEATHER19"="Ice rain";
+"WEATHER20"="Duststorm";
+"WEATHER21"="Light to moderate rain";
+"WEATHER22"="Moderate to heavy rain";
+"WEATHER23"="Heavy rain to storm";
+"WEATHER24"="Storm to heavy storm";
+"WEATHER25"="Heavy to severe storm";
+"WEATHER26"="Light to moderate snow";
+"WEATHER27"="Moderate to heavy snow";
+"WEATHER28"="Heavy snow to snowstorm";
+"WEATHER29"="Dust";
+"WEATHER30"="Sand";
+"WEATHER31"="Sandstorm";
+"WEATHER53"="Haze";
+"WEATHER99"="Unknown";
+
+//
+"WIND00"="No wind";
+"WIND01"="Northeast";
+"WIND02"="East";
+"WIND03"="Southeast";
+"WIND04"="South";
+"WIND05"="Southwest";
+"WIND06"="West";
+"WIND07"="Northwest";
+"WIND08"="North";
+"WIND09"="Whirl wind";
+
+//
+"WINDSPEED00"="<10m/h";
+"WINDSPEED01"="10~17m/h";
+"WINDSPEED02"="17~25m/h";
+"WINDSPEED03"="25~34m/h";
+"WINDSPEED04"="34~43m/h";
+"WINDSPEED05"="43~54m/h";
+"WINDSPEED06"="54~65m/h";
+"WINDSPEED07"="65~77m/h";
+"WINDSPEED08"="77~89m/h";
+"WINDSPEED09"="89~102m/h";
+
+

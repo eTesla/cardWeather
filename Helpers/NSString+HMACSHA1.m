@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 east. All rights reserved.
 //
 
-#import "NSString+HMACSHA1.h"
 #import <CommonCrypto/CommonHMAC.h>
+#import "NSString+HMACSHA1.h"
 
 @implementation NSString(HMACSHA1)
 

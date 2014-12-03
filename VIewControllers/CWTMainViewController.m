@@ -12,6 +12,8 @@
 #import "UIViewController+ETDrawerController.h"
 #import "ETDrawerViewController.h"
 #import "CWTHTTPClient.h"
+#import "Mantle.h"
+#import "CWTWeatherInfo.h"
 
 @interface CWTMainViewController ()
 {
@@ -37,16 +39,47 @@
         [weakself.menuBtn touchUpInsideHandler:nil];
     }];
     
-    [CWTHTTPClient getWeatherInfoWithAreaId:@""
-                                       type:@""
-                                       date:@""
+    [CWTHTTPClient getWeatherInfoWithAreaId:@"101280101"
                                successBlock:^(id object){
                                    NSLog(@"success!!");
+                                   NSLog(@"response = %@", object);
+                                   
+                                   CWTWeatherInfo *weatherInfo = [MTLJSONAdapter modelOfClass:[CWTWeatherInfo class] fromJSONDictionary:object error:nil];
                                }
                                   erroBlock:^(NSString* error){
                                       
                                       NSLog(@"fail!!");
     }];
+    
+    [CWTHTTPClient getForecast7dWithAreaId:@"101280101"
+                               successBlock:^(id object){
+                                   NSLog(@"success!!");
+                                   NSLog(@"response = %@", object);
+                               }
+                                  erroBlock:^(NSString* error){
+                                      
+                                      NSLog(@"fail!!");
+                                  }];
+    
+    [CWTHTTPClient getForecast24hWithAreaId:@"101280101"
+                               successBlock:^(id object){
+                                   NSLog(@"success!!");
+                                   NSLog(@"response = %@", object);
+                               }
+                                  erroBlock:^(NSString* error){
+                                      
+                                      NSLog(@"fail!!");
+                                  }];
+    
+    [CWTHTTPClient getWeatherIndexWithAreaId:@"101280101"
+                               successBlock:^(id object){
+                                   NSLog(@"success!!");
+                                   NSLog(@"response = %@", object);
+                               }
+                                  erroBlock:^(NSString* error){
+                                      
+                                      NSLog(@"fail!!");
+                                  }];
 }
 
 - (void)didReceiveMemoryWarning {

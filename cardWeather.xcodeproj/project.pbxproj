@@ -20,6 +20,10 @@
 		112DFC3E1A1F79C300F11D2C /* CWTMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 112DFC3D1A1F79C300F11D2C /* CWTMenuButton.m */; };
 		116585F71A24CE850077E654 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 116585F61A24CE850077E654 /* Utils.m */; };
 		116585FA1A24D00D0077E654 /* NSString+HMACSHA1.m in Sources */ = {isa = PBXBuildFile; fileRef = 116585F91A24D00D0077E654 /* NSString+HMACSHA1.m */; };
+		DABFC6D01A2C6B1C00A7B7D4 /* CWTWeatherInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DABFC6CF1A2C6B1C00A7B7D4 /* CWTWeatherInfo.m */; };
+		DABFC6D31A2F0D0700A7B7D4 /* CWTForecastInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DABFC6D21A2F0D0700A7B7D4 /* CWTForecastInfo.m */; };
+		DABFC6D61A2F14E200A7B7D4 /* CWTWeatherMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DABFC6D51A2F14E200A7B7D4 /* CWTWeatherMap.m */; };
+		DABFC6DB1A2F172200A7B7D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DABFC6DD1A2F172200A7B7D4 /* Localizable.strings */; };
 		DB4DA61575452FF893EA3BC3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81954E6B1D78E716B9B3BB93 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +55,14 @@
 		6355819C043B81CD5BB1F429 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		81954E6B1D78E716B9B3BB93 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2D1EDCEF1F5DAD9926F99DF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		DABFC6CE1A2C6B1C00A7B7D4 /* CWTWeatherInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTWeatherInfo.h; sourceTree = "<group>"; };
+		DABFC6CF1A2C6B1C00A7B7D4 /* CWTWeatherInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTWeatherInfo.m; sourceTree = "<group>"; };
+		DABFC6D11A2F0D0700A7B7D4 /* CWTForecastInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTForecastInfo.h; sourceTree = "<group>"; };
+		DABFC6D21A2F0D0700A7B7D4 /* CWTForecastInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTForecastInfo.m; sourceTree = "<group>"; };
+		DABFC6D41A2F14E200A7B7D4 /* CWTWeatherMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTWeatherMap.h; sourceTree = "<group>"; };
+		DABFC6D51A2F14E200A7B7D4 /* CWTWeatherMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTWeatherMap.m; sourceTree = "<group>"; };
+		DABFC6DE1A2F173100A7B7D4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		DABFC6E01A2F175D00A7B7D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,9 +81,9 @@
 			isa = PBXGroup;
 			children = (
 				112DFBD91A1B911000F11D2C /* cardWeather */,
-				112DFBD81A1B911000F11D2C /* Products */,
-				FED14B352EFCC85548FDB227 /* Pods */,
 				48D7A9E329B3BA8B22A283AC /* Frameworks */,
+				FED14B352EFCC85548FDB227 /* Pods */,
+				112DFBD81A1B911000F11D2C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,10 +105,13 @@
 				112DFC201A1D01F000F11D2C /* Resource.xcassets */,
 				116585F41A24CE750077E654 /* Commen */,
 				112DFC081A1CD80C00F11D2C /* Helpers */,
+				DABFC6CD1A2C6ABB00A7B7D4 /* Models */,
 				112DFC2B1A1E49A100F11D2C /* NetAgent */,
 				112DFBDA1A1B911000F11D2C /* Supporting Files */,
+				DAEC0A3A1A256FD200F5BD2A /* Ventors */,
 				112DFC2F1A1F6C8700F11D2C /* ViewControllers */,
 				112DFC3A1A1F799900F11D2C /* Views */,
+				DABFC6DD1A2F172200A7B7D4 /* Localizable.strings */,
 			);
 			path = cardWeather;
 			sourceTree = "<group>";
@@ -185,6 +200,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DABFC6CD1A2C6ABB00A7B7D4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DABFC6CE1A2C6B1C00A7B7D4 /* CWTWeatherInfo.h */,
+				DABFC6CF1A2C6B1C00A7B7D4 /* CWTWeatherInfo.m */,
+				DABFC6D11A2F0D0700A7B7D4 /* CWTForecastInfo.h */,
+				DABFC6D21A2F0D0700A7B7D4 /* CWTForecastInfo.m */,
+				DABFC6D41A2F14E200A7B7D4 /* CWTWeatherMap.h */,
+				DABFC6D51A2F14E200A7B7D4 /* CWTWeatherMap.m */,
+			);
+			path = Models;
+			sourceTree = SOURCE_ROOT;
+		};
+		DAEC0A3A1A256FD200F5BD2A /* Ventors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Ventors;
+			sourceTree = SOURCE_ROOT;
+		};
 		FED14B352EFCC85548FDB227 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +272,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 112DFBCE1A1B911000F11D2C;
 			productRefGroup = 112DFBD81A1B911000F11D2C /* Products */;
@@ -254,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				112DFC261A1E19D200F11D2C /* weather.storyboard in Resources */,
+				DABFC6DB1A2F172200A7B7D4 /* Localizable.strings in Resources */,
 				112DFBE81A1B911000F11D2C /* Images.xcassets in Resources */,
 				112DFC211A1D01F000F11D2C /* Resource.xcassets in Resources */,
 			);
@@ -300,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				116585F71A24CE850077E654 /* Utils.m in Sources */,
+				DABFC6D61A2F14E200A7B7D4 /* CWTWeatherMap.m in Sources */,
 				116585FA1A24D00D0077E654 /* NSString+HMACSHA1.m in Sources */,
 				112DFC391A1F6C8700F11D2C /* UIViewController+ETDrawerController.m in Sources */,
 				112DFC3E1A1F79C300F11D2C /* CWTMenuButton.m in Sources */,
@@ -308,11 +346,25 @@
 				112DFBDD1A1B911000F11D2C /* main.m in Sources */,
 				112DFC371A1F6C8700F11D2C /* CWTMainViewController.m in Sources */,
 				112DFC111A1CD80C00F11D2C /* ETDrawerVisualManager.m in Sources */,
+				DABFC6D31A2F0D0700A7B7D4 /* CWTForecastInfo.m in Sources */,
+				DABFC6D01A2C6B1C00A7B7D4 /* CWTWeatherInfo.m in Sources */,
 				112DFC2E1A1E49CD00F11D2C /* CWTHTTPClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DABFC6DD1A2F172200A7B7D4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DABFC6DE1A2F173100A7B7D4 /* zh-Hans */,
+				DABFC6E01A2F175D00A7B7D4 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		112DFBF81A1B911000F11D2C /* Debug */ = {
