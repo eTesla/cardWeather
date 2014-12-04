@@ -1,15 +1,15 @@
 //
-//  CWTForecastInfo.m
+//  CWTForecast7d.m
 //  cardWeather
 //
-//  Created by east on 14/12/3.
-//  Copyright (c) 2014年 east. All rights reserved.
+//  Created by April on 12/3/14.
+//  Copyright (c) 2014 east. All rights reserved.
 //
 
+#import "CWTForecast7d.h"
 #import "CWTForecastInfo.h"
-#import "CWTWeatherMap.h"
 
-@implementation CWTForecastInfo
+@implementation CWTForecast7d
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
@@ -33,18 +33,9 @@
              @"month": @"f.f0",
              @"day": @"f.f0",
              @"time": @"f.f0",
-             @"wtDay": @"f.f1.fa",
-             @"wtNight": @"f.f1.fb",
-             @"tempDay": @"f.f1.fc",
-             @"tempNight": @"f.f1.fd",
-             @"wdDay": @"f.f1.fe",
-             @"wdNight": @"f.f1.ff",
-             @"wsDay": @"f.f1.fg",
-             @"wsNight": @"f.f1.fh",
-             @"sunTime": @"f.f1.fi",
+             @"forecast7dData": @"f.f1",
              };
 }
-
 
 + (NSValueTransformer *)yearJSONTransformer {
     return [MTLValueTransformer transformerWithBlock:^(NSString *str)
@@ -74,32 +65,13 @@
             }];
 }
 
-- (NSString *)wtDayName {
-    return [CWTWeatherMap weatherMap][self.wtDay];
-}
-
-- (NSString *)wtNightName {
-    return [CWTWeatherMap weatherMap][self.wtNight];
-}
-
-
-- (NSString *)wdDayName {
-    return [CWTWeatherMap weatherMap][self.wdNight];
-}
-
-
-- (NSString *)wdNightName {
-    return [CWTWeatherMap weatherMap][self.wdNight];
-}
-
-
-- (NSString *)wsDayName {
-    return [CWTWeatherMap weatherMap][self.wsNight];
-}
-
-
-- (NSString *)wsNightName {
-    return [CWTWeatherMap weatherMap][self.wsNight];
++ (NSValueTransformer *)forecast7dDataJSONTransformer {
+    return [MTLValueTransformer transformerWithBlock:^(NSArray *array)
+            {
+                NSArray *allData = [MTLJSONAdapter modelsOfClass:[CWTForecastInfo class] fromJSONArray:array error:nil];
+                return allData;
+                
+            }];
 }
 
 @end

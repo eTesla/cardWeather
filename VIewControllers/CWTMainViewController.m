@@ -14,6 +14,9 @@
 #import "CWTHTTPClient.h"
 #import "Mantle.h"
 #import "CWTWeatherInfo.h"
+#import "CWTForecast7d.h"
+#import "CWTForecastInfo.h"
+#import "Utils.h"
 
 @interface CWTMainViewController ()
 {
@@ -39,6 +42,7 @@
         [weakself.menuBtn touchUpInsideHandler:nil];
     }];
     
+    /*
     [CWTHTTPClient getWeatherInfoWithAreaId:@"101280101"
                                successBlock:^(id object){
                                    NSLog(@"success!!");
@@ -55,6 +59,11 @@
                                successBlock:^(id object){
                                    NSLog(@"success!!");
                                    NSLog(@"response = %@", object);
+                                   
+                                   CWTForecast7d *fInfo = [MTLJSONAdapter modelOfClass:[CWTForecast7d class] fromJSONDictionary:object error:nil];
+                                
+                                   CWTForecastInfo *data = [fInfo.forecast7dData objectAtIndex:1];
+                                   NSLog(@"wt = %@", NSLocalizedString([data wtDayName], ""));
                                }
                                   erroBlock:^(NSString* error){
                                       
@@ -80,6 +89,18 @@
                                       
                                       NSLog(@"fail!!");
                                   }];
+     */
+    
+    UIColor *color1 = [UIColor colorWithRed:246.0f/255.0f green:194.0f/255.0f blue:93.0f/255.0f alpha:1.0f];
+    UIColor *color2 = [UIColor colorWithRed:244.0f/255.0f green:172.0f/255.0f blue:58.0f/255.0f alpha:1.0f];
+    
+    NSArray *colorArray = [NSArray arrayWithObjects:color1, color2, nil];
+    UIImageView *imgV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    imgV.image = [Utils gradientImageFromColors:colorArray andSize:self.view.frame.size ByType:upleftTolowRightGtype];
+    [self.view addSubview:imgV];
+    [self.view sendSubviewToBack:imgV];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
