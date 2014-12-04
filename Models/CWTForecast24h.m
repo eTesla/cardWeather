@@ -7,6 +7,7 @@
 //
 
 #import "CWTForecast24h.h"
+#import "CWTWeatherMap.h"
 
 #pragma mark - CWTForecast24hInfo
 @implementation CWTForecast24hInfo
@@ -60,6 +61,18 @@
             {
                 return [str substringWithRange:NSMakeRange(10, 2)];
             }];
+}
+
+- (NSString *)wtName {
+    return [CWTWeatherMap weatherMap][self.tempC];
+}
+
+- (NSString *)wdName {
+    return [CWTWeatherMap windMap][self.wind];
+}
+
+- (NSString *)wsName {
+    return [CWTWeatherMap windSpeedMap][self.windSpeed];
 }
 
 @end

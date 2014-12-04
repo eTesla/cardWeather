@@ -22,6 +22,10 @@
 @property (nonatomic, strong) NSString *hour;           //小时
 @property (nonatomic, strong) NSString *minute;         //分钟
 
+- (NSString *)wtName;
+- (NSString *)wdName;
+- (NSString *)wsName;
+
 @end
 
 
