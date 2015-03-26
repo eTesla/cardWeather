@@ -23,6 +23,7 @@
 		116619F61A2F3C2D002A22B0 /* CWTWeatherRT.m in Sources */ = {isa = PBXBuildFile; fileRef = 116619F51A2F3C2D002A22B0 /* CWTWeatherRT.m */; };
 		116619F91A2F401D002A22B0 /* CWTForecast24h.m in Sources */ = {isa = PBXBuildFile; fileRef = 116619F81A2F401D002A22B0 /* CWTForecast24h.m */; };
 		116619FC1A2F4032002A22B0 /* CWTForecast7d.m in Sources */ = {isa = PBXBuildFile; fileRef = 116619FB1A2F4032002A22B0 /* CWTForecast7d.m */; };
+		11A21C821AC46BF200DE0F60 /* CWTConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A21C811AC46BF200DE0F60 /* CWTConstant.m */; };
 		DABFC6D01A2C6B1C00A7B7D4 /* CWTWeatherInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DABFC6CF1A2C6B1C00A7B7D4 /* CWTWeatherInfo.m */; };
 		DABFC6D31A2F0D0700A7B7D4 /* CWTForecastInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DABFC6D21A2F0D0700A7B7D4 /* CWTForecastInfo.m */; };
 		DABFC6D61A2F14E200A7B7D4 /* CWTWeatherMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DABFC6D51A2F14E200A7B7D4 /* CWTWeatherMap.m */; };
@@ -61,6 +62,8 @@
 		116619F81A2F401D002A22B0 /* CWTForecast24h.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTForecast24h.m; sourceTree = "<group>"; };
 		116619FA1A2F4032002A22B0 /* CWTForecast7d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTForecast7d.h; sourceTree = "<group>"; };
 		116619FB1A2F4032002A22B0 /* CWTForecast7d.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTForecast7d.m; sourceTree = "<group>"; };
+		11A21C801AC46BF200DE0F60 /* CWTConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTConstant.h; sourceTree = "<group>"; };
+		11A21C811AC46BF200DE0F60 /* CWTConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTConstant.m; sourceTree = "<group>"; };
 		6355819C043B81CD5BB1F429 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		81954E6B1D78E716B9B3BB93 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2D1EDCEF1F5DAD9926F99DF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -197,6 +200,8 @@
 			children = (
 				116585F51A24CE850077E654 /* Utils.h */,
 				116585F61A24CE850077E654 /* Utils.m */,
+				11A21C801AC46BF200DE0F60 /* CWTConstant.h */,
+				11A21C811AC46BF200DE0F60 /* CWTConstant.m */,
 			);
 			path = Commen;
 			sourceTree = SOURCE_ROOT;
@@ -364,6 +369,7 @@
 				116619FC1A2F4032002A22B0 /* CWTForecast7d.m in Sources */,
 				112DFC371A1F6C8700F11D2C /* CWTMainViewController.m in Sources */,
 				112DFC111A1CD80C00F11D2C /* ETDrawerVisualManager.m in Sources */,
+				11A21C821AC46BF200DE0F60 /* CWTConstant.m in Sources */,
 				DABFC6D31A2F0D0700A7B7D4 /* CWTForecastInfo.m in Sources */,
 				DABFC6D01A2C6B1C00A7B7D4 /* CWTWeatherInfo.m in Sources */,
 				112DFC2E1A1E49CD00F11D2C /* CWTHTTPClient.m in Sources */,
@@ -473,6 +479,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "40e664e2-e0f7-4612-ac35-d30af578ba6e";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -488,6 +495,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "40e664e2-e0f7-4612-ac35-d30af578ba6e";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

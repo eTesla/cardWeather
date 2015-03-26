@@ -9,6 +9,8 @@
 #import "CWTForecast24h.h"
 #import "CWTWeatherMap.h"
 
+//http://m.weather.com.cn/mpub/hours/101280101.html
+
 #pragma mark - CWTForecast24hInfo
 @implementation CWTForecast24hInfo
 
